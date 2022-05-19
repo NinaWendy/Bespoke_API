@@ -1,6 +1,7 @@
 package interfaces;
 
 import models.Department;
+import models.User;
 
 import java.util.List;
 
@@ -11,6 +12,8 @@ public interface DepartmentDao {
 
     //Read
     List<Department> getAllDepartments(); //returns a list of all departments
+    List<User> getAllUsersOfADepartment(int department_id);
+
     Department findDepartmentById(int id);
 
     //Update

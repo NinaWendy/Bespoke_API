@@ -10,7 +10,6 @@ public interface DepartmentNewsDao {
 
     //read
     List<DepartmentNews> getAllDepartmentNews();
-//    List<DepartmentNews> getAllNewsByDepartment(int department_id);
 
     //update
 
