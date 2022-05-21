@@ -20,6 +20,7 @@ dependencies {
     implementation 'com.sparkjava:spark-core:2.9.3'
     implementation 'org.slf4j:slf4j-simple:1.7.36'
     implementation group: 'com.h2database', name: 'h2', version: '1.4.191'
+    implementation 'com.google.code.gson:gson:2.5'
 }
 
 test {
