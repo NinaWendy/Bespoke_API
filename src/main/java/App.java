@@ -94,6 +94,16 @@ public class App {
             return g.toJson(list);
         }));
 
+        post("/users/:id/delete", "application/json", (request, response) -> {  //accepts a request in format JSON from an app
+            User user = g.fromJson(request.body(), User.class);
+            int userId = Integer.parseInt(request.params("id"));
+            userDao.findUserById(userId);
+            userDao.deleteUserById(userId);
+            response.status(200);
+            return g.toJson(user);
+        });
+
+
         //view a particular user and their details
         get("/users/:id", "application/json", (request, response) -> { //accept a request in format JSON from an app
             response.type("application/json");
